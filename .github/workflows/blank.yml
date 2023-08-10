@@ -25,4 +25,4 @@ jobs:
       - uses: yesolutions/mirror-action@master
         with:
             REMOTE: 'https://github.com/roberluna/demo-frontend.git'
-            token: ${{ secrets.PAT }}
+            GIT_PASSWORD: ${{ secrets.PAT }}
