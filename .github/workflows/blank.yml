@@ -3,25 +3,19 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  repo-sync:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
-            fetch-depth: 0
-      - uses: yesolutions/mirror-action@master
+          persist-credentials: false
+
+      - name: repo-sync
+        uses: repo-sync/github-sync@v2
         with:
-            REMOTE: 'https://github.com/roberluna/demo-frontend.git'
-            GIT_USERNAME: roberluna
-            GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+          source_repo: 'https://github.com/roberluna/demo-frontend.git'
+          source_branch: 'main'
+          destination_branch: 'main'
+          github_token: ${{ secrets.PAT }}
