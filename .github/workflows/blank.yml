@@ -1,7 +1,6 @@
 name: Repo Sync
 on:
-  schedule: 
-  - cron: "*/1 * * * *"
+  push
 jobs:
   repo-sync:
     name: Repo Sync
