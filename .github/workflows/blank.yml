@@ -7,6 +7,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -17,7 +19,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
             fetch-depth: 0
       - uses: yesolutions/mirror-action@master
@@ -25,3 +27,4 @@ jobs:
             REMOTE: 'https://github.com/roberluna/demo-frontend.git'
             GIT_USERNAME: roberluna
             GIT_PASSWORD: ${{ secrets.PAT }}
+            GITHUB_TOKEN: ${{ secrets.PAT }}
