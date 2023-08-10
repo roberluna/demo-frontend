@@ -26,4 +26,4 @@ jobs:
         with:
             REMOTE: 'https://github.com/roberluna/demo-frontend.git'
             GIT_USERNAME: roberluna
-            GIT_PASSWORD: "Miki397088$"
+            GIT_PASSWORD: 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
