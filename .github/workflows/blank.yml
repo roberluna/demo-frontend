@@ -24,6 +24,6 @@ jobs:
             fetch-depth: 0
       - uses: yesolutions/mirror-action@master
         with:
-            REMOTE: 'https://roberluna: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@github.com/roberluna/demo-frontend.git'
+            REMOTE: 'https://roberluna:<PAT>@github.com/roberluna/demo-frontend.git'
             GIT_USERNAME: roberluna
             GIT_PASSWORD: "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"
