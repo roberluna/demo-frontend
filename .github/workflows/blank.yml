@@ -24,4 +24,4 @@ jobs:
         with:
             REMOTE: 'https://github.com/roberluna/demo-frontend.git'
             GIT_USERNAME: roberluna
-            GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+            GIT_PASSWORD: ${{ secrets.PAT }}
