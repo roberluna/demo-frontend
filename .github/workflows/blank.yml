@@ -1,7 +1,7 @@
 name: Repo Sync
 on:
   schedule: 
-  - cron: "*/15 * * * *" 
+  - cron: '0 * * * *'
 jobs:
   repo-sync:
     name: Repo Sync
