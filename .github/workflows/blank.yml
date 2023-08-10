@@ -26,4 +26,4 @@ jobs:
         with:
             REMOTE: 'https://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@github.com/roberluna/demo-frontend.git'
             GIT_USERNAME: roberluna
-            GIT_PASSWORD: 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
+            GIT_PASSWORD: "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"
