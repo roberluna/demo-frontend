@@ -23,5 +23,5 @@ jobs:
       - uses: yesolutions/mirror-action@master
         with:
             REMOTE: 'https://github.com/roberluna/demo-frontend.git'
-            GIT_USERNAME: roberluna8
+            GIT_USERNAME: roberluna
             GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
